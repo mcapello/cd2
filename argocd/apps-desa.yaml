@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps-desa
+    path: argocd/apps-desa
     repoURL: https://github.com/mcapello/cd2.git
     targetRevision: HEAD
   syncPolicy:
