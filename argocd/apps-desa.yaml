@@ -16,6 +16,8 @@ spec:
   destinations:
   - namespace: argocd
     server: https://kubernetes.default.svc
+  - namespace: desa
+    server: https://kubernetes.default.svc
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
