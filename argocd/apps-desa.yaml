@@ -14,10 +14,12 @@ spec:
   - '*'
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   destinations:
-  - namespace: argocd
-    server: https://kubernetes.default.svc
-  - namespace: desa
-    server: https://kubernetes.default.svc
+  - namespace: *
+    server: *
+  # Deny all cluster-scoped resources from being created, except for Namespace
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: *
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
