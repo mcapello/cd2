@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
+  project: desa
   source:
     path: apps/app1/overlays/desa
     repoURL: https://github.com/mcapello/cd2.git

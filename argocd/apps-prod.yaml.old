@@ -1,4 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: prod
+  namespace: argocd
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # Project description
+  description: Proyecto prod
+---
+  apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: apps-prod
@@ -9,7 +21,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
+  project: prod
   source:
     path: argocd/apps-prod
     repoURL: https://github.com/mcapello/cd2.git

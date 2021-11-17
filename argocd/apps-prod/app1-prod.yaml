@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
+  project: prod
   source:
     path: apps/app1/overlays/prod
     repoURL: https://github.com/mcapello/cd2.git
