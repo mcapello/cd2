@@ -9,6 +9,13 @@ metadata:
 spec:
   # Project description
   description: Proyecto prod
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  destinations:
+  - namespace: prod
+    server: https://kubernetes.default.svc
 ---
   apiVersion: argoproj.io/v1alpha1
 kind: Application
