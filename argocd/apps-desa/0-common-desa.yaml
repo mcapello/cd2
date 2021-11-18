@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 0-common
+  name: 0-common-desa
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -9,9 +9,9 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: prod
+  project: desa
   source:
-    path: apps/0-common/overlays/prod
+    path: apps/0-common/overlays/desa
     repoURL: https://github.com/mcapello/cd2.git
     targetRevision: HEAD
   syncPolicy:
