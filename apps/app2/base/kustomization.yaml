@@ -1,4 +1,4 @@
 resources:
-- ns.yaml
+#- ns.yaml
 - se.yaml
 - deployment.yaml
