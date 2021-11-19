@@ -34,7 +34,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tools
   source:
-    path: argocd/tools
+    path: cluster-local/argocd/tools
     repoURL: https://github.com/mcapello/cd2.git
     targetRevision: HEAD
   syncPolicy:

@@ -7,4 +7,11 @@ bases:
 - ../../base
 patchesStrategicMerge:
 - deployment_patch.yaml
+patches:
+- path: ingress_patch.yaml
+  target:
+    group: networking.k8s.io
+    version: v1
+    kind: Ingress
+    name: ingress-app2
 

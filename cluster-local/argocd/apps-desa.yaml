@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: prod
+  name: desa
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   # Project description
-  description: Proyecto prod
+  description: Proyecto desa
   # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
@@ -24,7 +24,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-prod
+  name: apps-desa
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -32,9 +32,9 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: prod
+  project: desa
   source:
-    path: argocd/apps-prod
+    path: cluster-local/argocd/apps-desa
     repoURL: https://github.com/mcapello/cd2.git
     targetRevision: HEAD
   syncPolicy:

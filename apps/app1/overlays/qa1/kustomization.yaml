@@ -11,3 +11,10 @@ images:
 - name: caperiver/prueba
   newName: caperiver/prueba
   newTag: "3"
+patches:
+- path: ingress_patch.yaml
+  target:
+    group: networking.k8s.io
+    version: v1
+    kind: Ingress
+    name: ingress-app1

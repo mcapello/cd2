@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tools
   source:
-    path: argocd/tools/ingress-nginx
+    path: cluster-local/argocd/tools/ingress-nginx
     repoURL: https://github.com/mcapello/cd2.git
     targetRevision: HEAD
   syncPolicy:

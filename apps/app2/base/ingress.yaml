@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-app1
+  name: ingress-app2
 spec:
   rules:
   #- host: myservicea.foo.org
@@ -11,7 +11,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: svc-in-app1
+            name: svc-in-app2
             port:
               number: 80
   ingressClassName: nginx
