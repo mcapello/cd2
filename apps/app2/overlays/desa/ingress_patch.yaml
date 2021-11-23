@@ -2,5 +2,4 @@
 #https://datatracker.ietf.org/doc/html/rfc6902
 - op: replace
   path: /spec/rules/0/http/paths/0/path
-  #value: '/desa/app2'
-  value: '/'
+  value: '/desa/app2'
